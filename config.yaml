@@ -23,140 +23,6 @@ worlds:
     why_am_i_recommended: Welcome to Bera!
     channels: 3
 
-    #Properties for Broa 2
-  - flag: 0
-    server_message: Welcome to Broa!
-    event_message: Broa!
-    why_am_i_recommended: Welcome to Broa!
-    channels: 3
-
-    #Properties for Windia 3
-  - flag: 0
-    server_message: Welcome to Windia!
-    event_message: Windia!
-    why_am_i_recommended: Welcome to Windia!
-    channels: 3
-
-    #Properties for Khaini 4
-  - flag: 0
-    server_message: Welcome to Khaini!
-    event_message: Khaini!
-    why_am_i_recommended: Welcome to Khaini!
-    channels: 3
-
-    #Properties for Bellocan 5
-  - flag: 0
-    server_message: Welcome to Bellocan!
-    event_message: Bellocan!
-    why_am_i_recommended: Welcome to Bellocan!
-    channels: 3
-
-    #Properties for Mardia 6
-  - flag: 0
-    server_message: Welcome to Mardia!
-    event_message: Mardia!
-    why_am_i_recommended: Welcome to Mardia!
-    channels: 3
-
-    #Properties for Kradia 7
-  - flag: 0
-    server_message: Welcome to Kradia!
-    event_message: Kradia!
-    why_am_i_recommended: Welcome to Kradia!
-    channels: 3
-
-    #Properties for Yellonde 8
-  - flag: 0
-    server_message: Welcome to Yellonde!
-    event_message: Yellonde!
-    why_am_i_recommended: Welcome to Yellonde!
-    channels: 3
-
-    #Properties for Demethos 9
-  - flag: 0
-    server_message: Welcome to Demethos!
-    event_message: Demethos!
-    why_am_i_recommended: Welcome to Demethos!
-    channels: 3
-
-    #Properties for Galicia 10
-  - flag: 0
-    server_message: Welcome to Galicia!
-    event_message: Galicia!
-    why_am_i_recommended: Welcome to Galicia!
-    channels: 3
-
-    #Properties for Kastia 11
-  - flag: 0
-    server_message: Welcome to Kastia!
-    event_message: Kastia!
-    why_am_i_recommended: Welcome to Kastia!
-    channels: 3
-
-    #Properties for Judis 12
-  - flag: 0
-    server_message: Welcome to Judis!
-    event_message: Judis!
-    why_am_i_recommended: Welcome to Judis!
-    channels: 3
-
-    #Properties for Arcenia 13
-  - flag: 0
-    server_message: Welcome to Arcenia!
-    event_message: Arcenia!
-    why_am_i_recommended: Welcome to Arcenia!
-    channels: 3
-
-    #Properties for Plana 14
-  - flag: 0
-    server_message: Welcome to Plana!
-    event_message: Plana!
-    why_am_i_recommended: Welcome to Plana!
-    channels: 3
-
-    #Properties for El Nido 15
-  - flag: 0
-    server_message: Welcome to El Nido!
-    event_message: El Nido!
-    why_am_i_recommended: Welcome to El Nido!
-    channels: 3
-
-    #Properties for Kalluna 16
-  - flag: 0
-    server_message: Welcome to Kalluna!
-    event_message: Kalluna!
-    why_am_i_recommended: Welcome to Kalluna!
-    channels: 3
-
-    #Properties for Stius 17
-  - flag: 0
-    server_message: Welcome to Stius!
-    event_message: Stius!
-    why_am_i_recommended: Welcome to Stius!
-    channels: 3
-
-    #Properties for Croa 18
-  - flag: 0
-    server_message: Welcome to Croa!
-    event_message: Croa!
-    why_am_i_recommended: Welcome to Croa!
-    channels: 3
-
-    #Properties for Zenith 19
-  - flag: 0
-    server_message: Welcome to Zenith!
-    event_message: Zenith!
-    why_am_i_recommended: Welcome to Zenith!
-    channels: 3
-
-    #Properties for Medere 20
-  - flag: 0
-    server_message: Welcome to Medere!
-    event_message: Medere!
-    why_am_i_recommended: Welcome to Medere!
-    channels: 3
-
-
 server:
     #Database Configuration
     DB_URL_FORMAT: "jdbc:mysql://%s:3306/cosmic" # If the docker ENV for DB_HOST is anything but "db", this string format should be changed from 3306 to 3307 (or whichever port it was changed to in docker) 
@@ -196,9 +62,9 @@ server:
     LOGIN_ATTEMPT_DURATION: 120         #Period in seconds the login attempt remains registered on the system.
 
     #Ip Configuration
-    HOST: 127.0.0.1                 #WAN IPv4 address
-    LANHOST: 127.0.0.1              #LAN IPv4 address
-    LOCALHOST: 127.0.0.1            #Loopback IPv4 address
+    HOST: 52.52.164.67                #WAN IPv4 address
+    LANHOST: 52.52.164.67             #LAN IPv4 address
+    LOCALHOST: 52.52.164.67           #Loopback IPv4 address
     GMSERVER: false
 
     #Other configuration
@@ -227,7 +93,7 @@ server:
     USE_STORAGE_ITEM_SORT: true         #Enables storage "Arrange Items" feature.
     USE_ITEM_SORT: true                 #Enables inventory "Item Sort/Merge" feature.
     USE_ITEM_SORT_BY_NAME: false        #Item sorting based on name rather than id.
-    USE_PARTY_FOR_STARTERS: false        #Players level 10 or below can create/invite other players on the given level range.
+    USE_PARTY_FOR_STARTERS: true        #Players level 10 or below can create/invite other players on the given level range.
     USE_AUTOASSIGN_STARTERS_AP: true   #Beginners level 10 or below have their AP autoassigned (they can't choose to levelup a stat). Set true ONLY if the localhost doesn't support AP assigning for beginners level 10 or below.
     USE_AUTOASSIGN_SECONDARY_CAP: true  #Prevents AP autoassign from spending on secondary stats after the player class' cap (defined on the autoassign handler) has been reached.
     USE_STARTING_AP_4: false             #Use early-GMS 4/4/4/4 starting stats. To overcome AP shortage, this gives 4AP/5AP at 1st/2nd job advancements.
@@ -240,7 +106,7 @@ server:
     USE_ENFORCE_ADMIN_ACCOUNT: false    #Forces accounts having GM characters to be treated as a "GM account" by the client (localhost). Some of the GM account perks is the ability to FLY, but unable to TRADE.
     USE_ENFORCE_NOVICE_EXPRATE: false    #Hardsets experience rate 1x for beginners level 10 or under. Ideal for roaming on novice areas without caring too much about losing some stats.
     USE_ENFORCE_HPMP_SWAP: false        #Forces players to reuse stats (via AP Resetting) located on HP/MP pool only inside the HP/MP stats.
-    USE_ENFORCE_MOB_LEVEL_RANGE: true   #Players N levels below the killed mob will gain no experience from defeating it.
+    USE_ENFORCE_MOB_LEVEL_RANGE: false   #Players N levels below the killed mob will gain no experience from defeating it.
     USE_ENFORCE_JOB_LEVEL_RANGE: false  #Caps the player level on the minimum required to advance their current jobs.
     USE_ENFORCE_JOB_SP_RANGE: false     #Caps the player SP level on the total obtainable by their current jobs. After changing jobs, missing SP will be retrieved.
     USE_ENFORCE_ITEM_SUGGESTION: false  #Forces the Owl of Minerva and the Cash Shop to always display the defined item array instead of those featured by the players.
@@ -254,9 +120,9 @@ server:
     USE_ERASE_UNTRADEABLE_DROP: true    #Forces flagged untradeable items to disappear when dropped.
     USE_ERASE_PET_ON_EXPIRATION: false  #Forces pets to be removed from inventory when expire time comes, rather than converting it to a doll.
     USE_BUFF_MOST_SIGNIFICANT: true     #When applying buffs, the player will stick with the highest stat boost among the listed, rather than overwriting stats.
-    USE_BUFF_EVERLASTING: false         #Every applied buff on players holds expiration time so high it'd be considered permanent. Suggestion thanks to Vcoc.
+    USE_BUFF_EVERLASTING: true         #Every applied buff on players holds expiration time so high it'd be considered permanent. Suggestion thanks to Vcoc.
     USE_MULTIPLE_SAME_EQUIP_DROP: true  #Enables multiple drops by mobs of the same equipment, number of possible drops based on the quantities provided at the drop data.
-    USE_ENABLE_FULL_RESPAWN: false       #At respawn task, always respawn missing mobs when they're available. Spawn count doesn't depend on how many players are currently there.
+    USE_ENABLE_FULL_RESPAWN: true       #At respawn task, always respawn missing mobs when they're available. Spawn count doesn't depend on how many players are currently there.
     USE_ENABLE_CHAT_LOG: false          #Write in-game chat to log
     USE_MAP_OWNERSHIP_SYSTEM: false      #Flag to enable/disable map ownership system
     USE_FISHING_SYSTEM: false            #Flag to enable/disable custom fishing system
@@ -290,8 +156,8 @@ server:
     EQUIP_EXP_RATE: 1.0                  #Rate for equipment exp gain, grows linearly. Set 1.0 for default (about 100~200 same-level range mobs killed to pass equip from level 1 to 2).
     PQ_BONUS_EXP_RATE: 0.5               #Rate for the PQ exp reward.
 
-    EXP_SPLIT_LEVEL_INTERVAL: 5            #Non-contributing players must be within N level between the mob to receive EXP.
-    EXP_SPLIT_LEECH_INTERVAL: 5            #Non-contributing players must be within N level between any contributing party member to receive EXP.
+    EXP_SPLIT_LEVEL_INTERVAL: 100            #Non-contributing players must be within N level between the mob to receive EXP.
+    EXP_SPLIT_LEECH_INTERVAL: 100            #Non-contributing players must be within N level between any contributing party member to receive EXP.
     EXP_SPLIT_MVP_MOD: 0.2
     EXP_SPLIT_COMMON_MOD: 0.8
     PARTY_BONUS_EXP_RATE: 1.0            #Rate for the party exp bonus reward.
@@ -343,20 +209,20 @@ server:
     CHSCROLL_STAT_RANGE: 5              #Stat upgrade range (-N, N) on chaos scrolls.
 
     #Beginner Skills Configuration
-    USE_ULTRA_NIMBLE_FEET: false     #Massive speed & jump upgrade.
-    USE_ULTRA_RECOVERY: false        #Massive recovery amounts overtime.
-    USE_ULTRA_THREE_SNAILS: false    #Massive damage on shell toss.
+    USE_ULTRA_NIMBLE_FEET: true     #Massive speed & jump upgrade.
+    USE_ULTRA_RECOVERY: true        #Massive recovery amounts overtime.
+    USE_ULTRA_THREE_SNAILS: true    #Massive damage on shell toss.
 
     #Other Skills Configuration
     USE_FULL_ARAN_SKILLSET: false   #Enables starter availability to all Aran job skills. Suggestion thanks to Masterrulax.
-    USE_FAST_REUSE_HERO_WILL: false  #Greatly reduce cooldown on Hero's Will.
+    USE_FAST_REUSE_HERO_WILL: true  #Greatly reduce cooldown on Hero's Will.
     USE_ANTI_IMMUNITY_CRASH: false   #Crash skills additionally removes the mob's invincibility buffs. Suggestion thanks to Celestial.
-    USE_UNDISPEL_HOLY_SHIELD: false  #Holy shield buff also prevents players from suffering dispel from mobs.
-    USE_FULL_HOLY_SYMBOL: false      #Holy symbol doesn't require EXP sharers to work in full.
+    USE_UNDISPEL_HOLY_SHIELD: true  #Holy shield buff also prevents players from suffering dispel from mobs.
+    USE_FULL_HOLY_SYMBOL: true      #Holy symbol doesn't require EXP sharers to work in full.
 
     #Character Configuration
-    USE_ADD_SLOTS_BY_LEVEL: false    #Slots are added each 20 levels.
-    USE_ADD_RATES_BY_LEVEL: false    #Rates are added each 20 levels.
+    USE_ADD_SLOTS_BY_LEVEL: true    #Slots are added each 20 levels.
+    USE_ADD_RATES_BY_LEVEL: true    #Rates are added each 20 levels.
     USE_STACK_COUPON_RATES: false   #Multiple coupons effects builds up together.
     USE_PERFECT_PITCH: false         #For lvl 30 or above, each lvlup grants player 1 perfect pitch.
 
@@ -370,12 +236,12 @@ server:
     QUEST_POINT_PER_EVENT_CLEAR: 0       #Each completed event instance awards N quest points, set 0 to disable.
 
     #Guild Configuration
-    CREATE_GUILD_MIN_PARTNERS: 6         #Minimum number of members on Guild Headquarters to establish a new guild.
-    CREATE_GUILD_COST: 1500000
-    CHANGE_EMBLEM_COST: 5000000
-    EXPAND_GUILD_BASE_COST: 500000
-    EXPAND_GUILD_TIER_COST: 1000000
-    EXPAND_GUILD_MAX_COST: 5000000
+    CREATE_GUILD_MIN_PARTNERS: 1        #Minimum number of members on Guild Headquarters to establish a new guild.
+    CREATE_GUILD_COST: 1000
+    CHANGE_EMBLEM_COST: 1000
+    EXPAND_GUILD_BASE_COST: 1000
+    EXPAND_GUILD_TIER_COST: 1000
+    EXPAND_GUILD_MAX_COST: 1000
 
     #Family Configuration
     FAMILY_REP_PER_KILL: 4               #Amount of rep gained per monster kill.
@@ -424,7 +290,7 @@ server:
     EVENT_LOBBY_DELAY: 10              #Cooldown duration in seconds before reopening an event lobby.
 
     #Dojo Configuration
-    USE_FAST_DOJO_UPGRADE: false     #Reduced Dojo training points amount required for a belt upgrade.
+    USE_FAST_DOJO_UPGRADE: true     #Reduced Dojo training points amount required for a belt upgrade.
     USE_DEADLY_DOJO: true          #Should bosses really use 1HP,1MP attacks in dojo?
     DOJO_ENERGY_ATK: 100                #Dojo energy gain when deal attack
     DOJO_ENERGY_DMG: 20                #Dojo energy gain when recv attack
